@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Test Coverage Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">🚀 AI Test Coverage Agent</div>
+      <div class="tagline">Detect gaps between your code and test cases instantly</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <div class="input-group">
+        <label for="code">Source Code</label>
+        <textarea id="code" placeholder="Paste your source code here..."></textarea>
+      </div>
+      <div class="input-group">
+        <label for="tests">Test Cases</label>
+        <textarea id="tests" placeholder="Paste your test cases here..."></textarea>
+      </div>
+      <button id="analyzeBtn" onclick="analyze()">
+        <span id="btnText">Analyze Coverage</span>
+      </button>
+    </section>
+
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Analyzing your code with AI...</p>
+    </div>
+
+    <section id="reportSection" class="report-section hidden">
+      <div class="report-header">
+        <h2>Analysis Report</h2>
+        <div id="issueCount" class="issue-count"></div>
+      </div>
+      <div id="summaryBar" style="display:flex; gap:12px; margin-bottom:20px;"></div>
+      <div id="issuesList"></div>
+      <div id="overallReport" class="overall-report"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
